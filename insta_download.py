@@ -59,6 +59,7 @@ class Parser:
             # open website
             self.browser.get('https://www.instagram.com/accounts/login/?next=%2F&source=mobile_nav')
             time.sleep(random.randrange(2, 4))
+            print(self.browser.title)
             # find username input
             user_input = self.browser.find_element_by_name('username')
             # clear the field (just in case)
@@ -101,6 +102,9 @@ class Parser:
         try:
             check = self.get_link(post_url)
             print(post_url)
+            username = self.username
+            password = self.password
+            self.login(username, password)
             # for post_url in hrefs:
             self.browser.get(post_url)
             print(self.browser.title)
