@@ -103,6 +103,7 @@ class Parser:
             print(post_url)
             # for post_url in hrefs:
             self.browser.get(post_url)
+            print(self.browser.title)
             time.sleep(4)
             video_src = "/html/body/div[1]/section/main/div/div[1]/article/div[2]/div/div/div[1]/div/div/video"
 
